@@ -13,6 +13,7 @@ Source:     http://www.cpan.org/modules/by-module/CGI/%{module}-%{version}.tar.g
 BuildRequires: perl(CGI::Application)
 BuildRequires: perl(Module::Build)
 BuildRequires: perl(Test::LongString)
+BuildRequires: perl(Exception::Class::TryCatch)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
