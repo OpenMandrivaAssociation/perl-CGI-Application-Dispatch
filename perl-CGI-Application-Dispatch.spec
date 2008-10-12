@@ -12,6 +12,7 @@ Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/CGI/%{module}-%{version}.tar.gz
 BuildRequires: perl(CGI::Application)
 BuildRequires: perl(Module::Build)
+BuildRequires: perl(Test::LongString)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
