@@ -1,5 +1,5 @@
 %define module   CGI-Application-Dispatch
-%define version  2.13
+%define version  2.14
 %define release  %mkrel 1
 
 Name:       perl-%{module}
