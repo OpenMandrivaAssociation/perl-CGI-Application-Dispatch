@@ -1,21 +1,22 @@
-%define module   CGI-Application-Dispatch
-%define version  2.16
-%define release  %mkrel 1
+%define upstream_name    CGI-Application-Dispatch
+%define upstream_version 2.16
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Dispatch requests to CGI::Application based object
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/CGI/%{module}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(CGI::Application)
 BuildRequires: perl(Module::Build)
 BuildRequires: perl(Test::LongString)
 BuildRequires: perl(Exception::Class::TryCatch)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides a way (as a mod_perl handler or running under vanilla CGI)
@@ -24,7 +25,7 @@ parse off the desired module and it's run mode, create an instance of that
 module and run it.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -45,5 +46,3 @@ rm -rf %buildroot
 %doc Changes TODO
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
