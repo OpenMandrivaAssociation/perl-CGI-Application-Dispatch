@@ -1,5 +1,5 @@
 %define upstream_name    CGI-Application-Dispatch
-%define upstream_version 2.17
+%define upstream_version 2.18
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
