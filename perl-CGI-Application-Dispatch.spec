@@ -46,3 +46,42 @@ rm -rf %buildroot
 %doc Changes TODO
 %{_mandir}/man3/*
 %perl_vendorlib/*
+
+
+%changelog
+* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 2.180.0-2mdv2011.0
++ Revision: 656882
+- rebuild for updated spec-helper
+
+* Wed Jan 05 2011 Guillaume Rousse <guillomovitch@mandriva.org> 2.180.0-1mdv2011.0
++ Revision: 628699
+- update to new version 2.18
+
+* Thu Dec 31 2009 Jérôme Quelin <jquelin@mandriva.org> 2.170.0-1mdv2011.0
++ Revision: 484370
+- update to 2.17
+
+* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 2.160.0-1mdv2010.0
++ Revision: 405770
+- rebuild using %%perl_convert_version
+
+* Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.16-1mdv2010.0
++ Revision: 370015
+- update to new version 2.16
+
+* Mon Dec 08 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.15-1mdv2009.1
++ Revision: 311977
+- update to new version 2.15
+
+* Tue Nov 04 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.14-1mdv2009.1
++ Revision: 299748
+- update to new version 2.14
+
+* Sun Oct 12 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.13-1mdv2009.1
++ Revision: 292885
+- import perl-CGI-Application-Dispatch
+
+
+* Thu Oct 09 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.13-1mdv2009.1
+- initial mdv release, generated with cpan2dist
+
