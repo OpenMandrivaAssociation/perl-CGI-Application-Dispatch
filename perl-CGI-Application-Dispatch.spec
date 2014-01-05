@@ -1,22 +1,21 @@
 %define upstream_name    CGI-Application-Dispatch
-%define upstream_version 2.18
+%define upstream_version 3.12
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    1
 
 Summary:    Dispatch requests to CGI::Application based object
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/CGI/CGI-Application-Dispatch-%{upstream_version}.tar.gz
 
 BuildRequires: perl(CGI::Application)
 BuildRequires: perl(Module::Build)
 BuildRequires: perl(Test::LongString)
 BuildRequires: perl(Exception::Class::TryCatch)
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides a way (as a mod_perl handler or running under vanilla CGI)
@@ -35,14 +34,11 @@ module and run it.
 ./Build test
 
 %install
-rm -rf %{buildroot}
 ./Build install destdir=%{buildroot}
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc Changes TODO
 %{_mandir}/man3/*
 %perl_vendorlib/*
@@ -84,4 +80,5 @@ rm -rf %buildroot
 
 * Thu Oct 09 2008 Guillaume Rousse <guillomovitch@mandriva.org> 2.13-1mdv2009.1
 - initial mdv release, generated with cpan2dist
+
 

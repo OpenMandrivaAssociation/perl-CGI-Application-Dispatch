@@ -1,2 +1,4 @@
+removed_sources:
+  CGI-Application-Dispatch-2.18.tar.gz: ac39c362a4cab07e8f4f12488215c39be6fdca8c
 sources:
-  "CGI-Application-Dispatch-2.18.tar.gz": ac39c362a4cab07e8f4f12488215c39be6fdca8c
+  CGI-Application-Dispatch-3.12.tar.gz: 35a31f1f6a077b0e2fb79d7f235c1605f84c323d
