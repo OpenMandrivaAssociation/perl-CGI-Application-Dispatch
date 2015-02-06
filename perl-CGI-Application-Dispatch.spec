@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Release:    4
 
 Summary:    Dispatch requests to CGI::Application based object
 License:    GPL+ or Artistic
