@@ -8,7 +8,7 @@ Release:    4
 Summary:    Dispatch requests to CGI::Application based object
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
+Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(CGI::Application)
