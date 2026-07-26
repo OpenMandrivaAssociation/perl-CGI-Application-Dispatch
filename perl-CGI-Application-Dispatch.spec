@@ -1,15 +1,13 @@
 %define upstream_name    CGI-Application-Dispatch
-%define upstream_version 3.12
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    3.12
+Release:    2
 
 Summary:    Dispatch requests to CGI::Application based object
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/markstos/CGI--Application--Dispatch
-Source0:    https://cpan.metacpan.org/authors/id/M/MA/MARKSTOS/CGI-Application-Dispatch-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/M/MA/MARKSTOS/CGI-Application-Dispatch-%{version}.tar.gz
 
 BuildRequires: perl(CGI::Application)
 BuildRequires: perl(Module::Build)
@@ -25,7 +23,7 @@ parse off the desired module and it's run mode, create an instance of that
 module and run it.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -63,9 +61,7 @@ rm -rf %buildroot
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 2.160.0-1mdv2010.0
 + Revision: 405770
-- rebuild using %%perl_convert_version
-
-* Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.16-1mdv2010.0
+- rebuild using %3.12 Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.16-1mdv2010.0
 + Revision: 370015
 - update to new version 2.16
 
